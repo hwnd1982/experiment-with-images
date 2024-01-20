@@ -15,6 +15,7 @@ imgs.forEach(img => {
     ctx.drawImage(img, 0, 0, img.width, img.height)
   
     const [r, g, b, a] = ctx.getImageData(0, 0, 1, 1).data;
+    console.log(r, g, b, a);
   
     slide.style.cssText = `background-color: rgba(${r}, ${g}, ${b}, ${a/255});`;
   }
